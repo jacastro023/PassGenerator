@@ -1,7 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var copyBtn = document.querySelector("#copy")
-var content = document.querySelector("password")
 
 // options
 var option1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -28,18 +27,6 @@ function confirms() {
     optionBuilder();
 };
 
-
-// Write password to the #password input
-// function writePassword() {
-//     var password = generatePassword();
-//     var passwordText = document.querySelector("#password");
-
-//     passwordText.value = password;
-
-//     copyBtn.removeAttribute("disabled");
-//     copyBtn.focus();
-// }
-
 // linking all of the options to be used
 function optionBuilder() {
     if (isOp1 || isOp2 || isOp3) {
@@ -64,11 +51,6 @@ function optionBuilder() {
     }
 };
 
-// adding to textarea
-function myFunction() {
-    document.getElementById("password").innerHTML = optionBuilder().value;
-};
-
 // adding amount of characters user selects
 function getString() {
     var text = "";
@@ -76,7 +58,8 @@ function getString() {
     for (var i = 0; i < userinput; i++) {
         text += possibleOptions[randomNumber()]
     };
-    alert(text);
+    // adding password to textarea
+    document.getElementById("password").innerHTML = text;
 };
 
 // randomizing characters
