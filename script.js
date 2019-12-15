@@ -55,7 +55,7 @@ function optionBuilder() {
 function getString() {
     var text = "";
 
-    for (var i = 0; i < userinput; i++) {
+    for (var i = 0; i = userinput; i++) {
         text += possibleOptions[randomNumber()]
     };
     // adding password to textarea
