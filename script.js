@@ -20,6 +20,12 @@ var possibleOptions = [];
 // asking user what it wants
 function confirms() {
     userinput = prompt("how many characters would you like to use?")
+    // making sure they select atleast 8 characters
+    if (userinput < 8 || userinput > 128) {
+        alert("must choose between 8-128 characters ")
+        confirms();
+    }
+
     isOp1 = confirm('Would you like to use lowercase letters?');
     isOp2 = confirm('Would you like to use uppercase letters?');
     isOp3 = confirm('Would you like to use numbers?');
@@ -29,7 +35,7 @@ function confirms() {
 
 // linking all of the options to be used
 function optionBuilder() {
-    if (isOp1 || isOp2 || isOp3) {
+    if (isOp1 || isOp2 || isOp3 | isOp4) {
         if (isOp1) {
             possibleOptions = possibleOptions.concat(option1)
         };
@@ -51,20 +57,19 @@ function optionBuilder() {
     }
 };
 
+function randomNumber() {
+    return Math.floor(Math.random() * possibleOptions.length)
+};
+
 // adding amount of characters user selects
 function getString() {
     var text = "";
-
     for (var i = 0; i = userinput; i++) {
         text += possibleOptions[randomNumber()]
     };
+    alert(text);
     // adding password to textarea
     document.getElementById("password").innerHTML = text;
-};
-
-// randomizing characters
-function randomNumber() {
-    return Math.floor(Math.random() * possibleOptions.length)
 };
 
 // adding the copy
