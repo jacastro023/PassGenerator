@@ -61,14 +61,12 @@ function randomNumber() {
     return Math.floor(Math.random() * possibleOptions.length)
 };
 
-// adding amount of characters user selects
 function getString() {
     var text = "";
-    for (var i = 0; i = userinput; i++) {
+
+    for (var i = 0; i < userinput; i++) {
         text += possibleOptions[randomNumber()]
     };
-    alert(text);
-    // adding password to textarea
     document.getElementById("password").innerHTML = text;
 };
 
