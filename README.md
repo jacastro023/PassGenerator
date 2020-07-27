@@ -18,7 +18,7 @@ Assignment #3 password generator
 
 ## Images
 * this is how the generator looks
-  [Generator](screenshot.png)
+  ![Alt text](screenshot.png "Optional Title")
 
 ## Sources
 * I created three different sheets for this password generator
